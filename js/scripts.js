@@ -17,6 +17,9 @@ var day = function(date,month,cc,yy){
 }
 
 if (0 < date < 31 && 0 < month < 12) {
+  if(female == true) {
+    femaleArray[day]
+  }
 
 }
 else {
