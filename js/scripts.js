@@ -1,27 +1,28 @@
 
 
 function formValidation() {
-  let date = document.getElementById("date").value;
-  let month = document.getElementById("month").value;
-  let year = document.getElementById("year").value;
+  let date = document.getElementById("date");
+  let month = document.getElementById("month");
+  let year = document.getElementById("year");
   let gender = document.getElementsByName("gender");
 
+
   // checks date
-  if (date === "") {
+  if (date.value === "") {
     alert("Enter date in number format");
   }
   else {
-    if (isNaN(date)) {
+    if (isNaN(date.value)) {
       alert("Enter a number");
 
     }
     else {
-      if (date <= 0 || date > 31) {
+      if (date.value <= 0 || date.value > 31) {
         alert("Invalid date");
 
       }
       else {
-        return date;
+        mdate = date.value;
 
       }
 
@@ -29,21 +30,21 @@ function formValidation() {
   }
 
   // checks month
-  if (month === "") {
+  if (month.value === "") {
     alert("Enter month in number format");
   }
   else {
-    if (isNaN(month)) {
+    if (isNaN(month.value)) {
       alert("Enter a number");
 
     }
     else {
-      if (month <= 0 || month > 12) {
+      if (month.value <= 0 || month.value > 12) {
         alert("Invalid month");
 
       }
       else {
-        return month;
+        mmonth = month.value;
 
       }
 
@@ -51,21 +52,21 @@ function formValidation() {
   }
 
   //checks year
-  if (year === "") {
+  if (year.value === "") {
     alert("Enter year in number format");
   }
   else {
-    if (isNaN(year)) {
+    if (isNaN(year.value)) {
       alert("Enter a number");
 
     }
     else {
-      if (year <= 0 || year > 2019) {
+      if (year.value <= 0 || year.value > 2019) {
         alert("Invalid year");
 
       }
       else {
-        return year;
+        myear = year.value;
 
       }
 
@@ -79,41 +80,45 @@ function formValidation() {
   else {
     for (i = 0; i < gender.length; i++) {
       if (gender[i].checked) {
-        alert(gender[i].value);
+        mgender = gender[i].value;
       }
     }
 
   }
 
   var userInfo = {
-    myDate: date,
-    myMonth: month,
-    myYear: year,
-    myGender: gender
+    myDate: mdate,
+    myMonth: mmonth,
+    myYear: myear,
+    myGender: mgender
   }
+
+
   return userInfo;
+}
+
+function myFunctions() {
+  formValidation();
+  calcDay();
+  getAkanName();
+
+
 }
 
 function calcDay() {
   var details = formValidation();
-  var calcDate = parseInt(details.myDate);
-  var calcMonth = parseInt(details.myMonth);
-  var cc = parseInt(details.myYear.slice(0, 2));
-  var yy = parseInt(details.myYear.slice(2, 4));
+  var date = parseInt(details.myDate);
+  var month = parseInt(details.myMonth);
+  var year = parseInt(details.myYear);
 
 
-  var weekDay = (((cc / 4) - 2 * cc - 1) + ((5 * yy / 4)) + ((26 * (calcMonth + 1) / 10)) + calcDate) % 7;
-
-  alert(weekDay);
-
-  // var x = Math.floor((14 - month) / 12);
-  // var y = year - x;
-  // var z = month + 12 * x - 2;
-
-  // dayOfWeek = (date + y + Math.floor(y / 4) - Math.floor(y / 100) +
-  //   Math.floor(year / 400) + Math.floor((31 * z) / 12) % 7);
-
-  //  alert(dayOfWeek);
+  var a = Math.floor((14 - month) / 12);
+  var y = year - a;
+  var m = month + 12 * a - 2;
+  dayOfWeek = (date + y + Math.floor(y / 4) - Math.floor(y / 100) +
+    Math.floor(year / 400) + Math.floor((31 * m) / 12)) % 7;
+  //alert(dayOfWeek);
+  return dayOfWeek;
 
 
 
@@ -124,7 +129,7 @@ function calcDay() {
 function getAkanName() {
   var userInfo = formValidation();
   var index = calcDay();
-  var gender = userInfo.gender;
+  var gender = userInfo.myGender;
 
 
 
@@ -148,7 +153,6 @@ function getAkanName() {
 
 }
 
-function akanNamer() {
 
 
 
@@ -157,7 +161,6 @@ function akanNamer() {
 
 
 
-}
 
 
 
