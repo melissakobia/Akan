@@ -31,7 +31,7 @@ As a user of the website you will be able to:
 
 ### Installing
 
-*** To view the app.Visit -> [Akan]()
+*** To view the app.Visit -> https://melissakobia.github.io/Akan/index.html[Akan]()
 * Step 1:
 Clone this repo: git clone https://github.com/melissakobia/Akan.git.
 * Step 2:
