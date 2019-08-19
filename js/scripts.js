@@ -22,7 +22,7 @@ function formValidation() {
 
       }
       else {
-        mdate = date.value;
+        valdate = date.value;
 
       }
 
@@ -44,7 +44,7 @@ function formValidation() {
 
       }
       else {
-        mmonth = month.value;
+        valmonth = month.value;
 
       }
 
@@ -66,7 +66,7 @@ function formValidation() {
 
       }
       else {
-        myear = year.value;
+        valyear = year.value;
 
       }
 
@@ -80,17 +80,17 @@ function formValidation() {
   else {
     for (i = 0; i < gender.length; i++) {
       if (gender[i].checked) {
-        mgender = gender[i].value;
+        valgender = gender[i].value;
       }
     }
 
   }
 
   var userInfo = {
-    myDate: mdate,
-    myMonth: mmonth,
-    myYear: myear,
-    myGender: mgender
+    myDate: valdate,
+    myMonth: valmonth,
+    myYear: valyear,
+    myGender: valgender
   }
 
 
