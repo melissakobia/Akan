@@ -1,9 +1,55 @@
-var date = parseInt(document.getElementById("date"));
-var month = parseInt(document.getElementById("month"));
-var year = document.getElementById("year");
+function formValidation(){
+  let date = parseInt(document.getElementById("date"));
+  let month = parseInt(document.getElementById("month"));
+  let year = document.getElementById("year");
+  let gender = document.getElementsByName("gender");
 
-var male = document.getElementById("male");
-var female = document.getElementById("female");
+  if(date === "") {
+    alert("Enter date in number format");
+  }
+  else {
+    if (isNaN(date)) {
+      alert("Enter a number");
+      
+    } 
+    else {
+      if (date <= 0 || date > 31) {
+        alert("Invalid date");
+        
+      } 
+      else {
+        alert("date");
+        
+      }
+      
+    }
+  }
+
+  if(month === "") {
+    alert("Enter month in number format");
+  }
+  else {
+    if (isNaN(month)) {
+      alert("Enter a number");
+      
+    } 
+    else {
+      if (month <= 0 || month > 12) {
+        alert("Invalid month");
+        
+      } 
+      else {
+        alert("month");
+        
+      }
+      
+    }
+  }
+
+}
+
+
+
 
 var femaleArray = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
 var maleArray = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];

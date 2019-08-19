@@ -14,49 +14,51 @@
 <body>
   <div class="container" id="form">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
 
       </div>
-      <div class="col-md-4 jumbotron">
+      <div class="col-md-6 jumbotron">
         <h1 class="text-center">Akan Namer</h1>
-          <form action="/" class="was-validated">
-            <div class="form-group">
-              <label for="date">Date:</label>
-              <input type="text" class="form-control" id="date" placeholder="Enter your date of birth" name="date" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-            </div>
-            <div class="form-group">
-                <label for="month">Month:</label>
-                <input type="text" class="form-control" id="month" placeholder="Enter your month of birth" name="month" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
-              </div>
-            <div class="form-group">
-              <label for="year">Year:</label>
-              <input type="text" class="form-control" id="year" placeholder="Enter your year of birth" name="name" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-            </div>
-            <div class="form-group form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="male" id="male" required> Male
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Check this checkbox to continue.</div>
-              </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" name="female" id="female" required> Female
-                  <div class="valid-feedback">Valid.</div>
-                  <div class="invalid-feedback">Check this checkbox to continue.</div>
-                </label>
-              </div>
-            <button type="submit" class="btn btn-warning text-center" id="submitbtn">Submit</button>
-          </form>  
+        <form action="/" class="was-validated" onsubmit="return formValidation()">
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="text" class="form-control" id="date" placeholder="Enter your date of birth" name="date"
+              required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="month">Month:</label>
+            <input type="text" class="form-control" id="month" placeholder="Enter your month of birth" name="month"
+              required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="text" class="form-control" id="year" placeholder="Enter your year of birth" name="name"
+              required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gender" value="male" id="male"> Male
+
+            </label>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="gender" value="female" id="female"> Female
+
+            </label>
+          </div>
+          <button type="submit" class="btn btn-warning text-center" id="submitbtn">Submit</button>
+          <a href="index.html" class="btn btn-info" role="button">Back</a>
+        </form>
 
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
 
       </div>
 
