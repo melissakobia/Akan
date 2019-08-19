@@ -97,13 +97,6 @@ function formValidation() {
   return userInfo;
 }
 
-function myFunctions() {
-  formValidation();
-  calcDay();
-  getAkanName();
-
-
-}
 
 function calcDay() {
   var details = formValidation();
@@ -152,6 +145,15 @@ function getAkanName() {
 
 
 }
+
+function myFunctions() {
+  formValidation();
+  calcDay();
+  getAkanName();
+
+
+}
+
 
 
 
