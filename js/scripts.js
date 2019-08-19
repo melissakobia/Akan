@@ -4,6 +4,7 @@ function formValidation(){
   let year = document.getElementById("year");
   let gender = document.getElementsByName("gender");
 
+  // checks date
   if(date === "") {
     alert("Enter date in number format");
   }
@@ -18,13 +19,14 @@ function formValidation(){
         
       } 
       else {
-        alert("date");
+        alert(date);
         
       }
       
     }
   }
 
+  // checks month
   if(month === "") {
     alert("Enter month in number format");
   }
@@ -39,12 +41,39 @@ function formValidation(){
         
       } 
       else {
-        alert("month");
+        alert(month);
         
       }
       
     }
   }
+
+  //checks year
+  if(year === "") {
+    alert("Enter year in number format");
+  }
+  else {
+    if (isNaN(year)) {
+      alert("Enter a number");
+      
+    } 
+    else {
+      if (year <= 0 || year > 2019) {
+        alert("Invalid year");
+        
+      } 
+      else {
+        alert(year);
+        
+      }
+      
+    }
+  }
+
+  //checks gender
+  
+
+
 
 }
 
