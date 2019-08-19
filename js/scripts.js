@@ -110,10 +110,8 @@ function calcDay() {
   var m = month + 12 * a - 2;
   dayOfWeek = (date + y + Math.floor(y / 4) - Math.floor(y / 100) +
     Math.floor(year / 400) + Math.floor((31 * m) / 12)) % 7;
-  //alert(dayOfWeek);
+  
   return dayOfWeek;
-
-
 
 
 
